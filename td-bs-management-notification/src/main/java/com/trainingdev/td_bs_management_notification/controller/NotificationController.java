@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1")
 @RequiredArgsConstructor
@@ -17,7 +19,15 @@ public class NotificationController {
 
     @PostMapping("/notification")
     @ResponseStatus(HttpStatus.CREATED)
-    public NotificationDetail createNotification (@RequestBody @Valid NotificationRequest notificationRequest){
+    public NotificationDetail createNotification(@RequestBody @Valid NotificationRequest notificationRequest) {
         return notificationService.createNotification(notificationRequest);
+    }
+
+
+    @GetMapping("/notification/{receptorUserId}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<NotificationDetail> getAllNotifications(@PathVariable(name = "receptorUserId", required = true)
+                                                        Integer receptorUserId) {
+        return notificationService.getAllNotifications(receptorUserId);
     }
 }

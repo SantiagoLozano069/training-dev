@@ -1,6 +1,7 @@
 package com.trainingdev.td_bs_management_notification.handler;
 
 import com.trainingdev.td_bs_management_notification.dto.output.ErrorResponse;
+import com.trainingdev.td_bs_management_notification.exception.NotificationNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -20,5 +21,11 @@ public class ExeptionHandler {
                 .map(error -> ((FieldError) error).getField() + ": " + error.getDefaultMessage())
                 .toList().toString();
         return new ErrorResponse(String.valueOf(HttpStatus.BAD_REQUEST.value()), errors);
+    }
+
+    @ExceptionHandler(NotificationNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ErrorResponse handleNoNotificationsFoundException(NotificationNotFoundException ex) {
+        return new ErrorResponse(ex.getCode(), ex.getMessage());
     }
 }

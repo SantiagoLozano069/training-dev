@@ -9,3 +9,9 @@ spring:
     defer-datasource-initialization: true
   h2:
     console.enabled: true
+
+properties:
+  messages:
+    error:
+      notifications-not-found: "Notifications not found"
+      sender-or-receptor-not-found: "Sender user or Receptor user not exists"

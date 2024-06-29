@@ -1,5 +1,6 @@
 package com.trainingdev.td_bs_management_notification.entities;
 
+import com.trainingdev.td_bs_management_notification.enums.NotificationTypeEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,15 +17,18 @@ public class NotificationEntity extends AuditModel{
     @Column(name = "id", nullable = false, unique = true)
     private Integer id;
 
-    @Column(name = "sender_user", nullable = false)
-    private Integer senderUserId;
+    @ManyToOne
+    @JoinColumn(name = "sender_user", nullable = false)
+    private UserEntity senderUser;
 
-    @Column(name = "receptor_user", nullable = false)
-    private Integer receptorUserId;
+    @ManyToOne
+    @JoinColumn(name = "receptor_user", nullable = false)
+    private UserEntity receptorUser;
 
     @Column(name = "description", nullable = false)
     private String description;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false, length = 15)
-    private String type;
+    private NotificationTypeEnum type;
 }
