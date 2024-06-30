@@ -44,8 +44,9 @@ public class NotificationServiceImpl implements NotificationService {
         if(Objects.isNull(receptorUser) || Objects.isNull(senderUser)){
             throw new NotificationException(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()), senderReceptorNotExist);
         }
-        NotificationEntity notificationEntity = notificationMapper.notificationRequestToNotificationEntity(notificationRequest,
-                senderUser, receptorUser);
+        NotificationEntity notificationEntity = notificationMapper.notificationRequestToNotificationEntity(notificationRequest);
+        notificationEntity.setSenderUser(senderUser);
+        notificationEntity.setReceptorUser(receptorUser);
         NotificationEntity notificationEntitySaved = notificationRepository.save(notificationEntity);
         return modelMapper.map(notificationEntitySaved, NotificationDetail.class);
     }

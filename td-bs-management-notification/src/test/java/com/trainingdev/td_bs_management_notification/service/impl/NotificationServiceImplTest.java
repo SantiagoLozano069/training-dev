@@ -56,7 +56,7 @@ class NotificationServiceImplTest {
 
         when(userRepository.findById(request.getSenderUserId())).thenReturn(Optional.ofNullable(userEntity));
         when(userRepository.findById(request.getReceptorUserId())).thenReturn(Optional.ofNullable(userEntity));
-        when(notificationMapper.notificationRequestToNotificationEntity(request, userEntity, userEntity)).thenReturn(notificationEntity);
+        when(notificationMapper.notificationRequestToNotificationEntity(request)).thenReturn(notificationEntity);
         when(notificationRepository.save(any(NotificationEntity.class))).thenReturn(notificationEntity);
         when(modelMapper.map(any(NotificationEntity.class), any(NotificationDetail.class.getClass()))).thenReturn(expectedDetail);
 
