@@ -14,4 +14,5 @@ properties:
   messages:
     error:
       notifications-not-found: "Notifications not found"
-      sender-or-receptor-not-found: "Sender user or Receptor user not exists"
+      sender-not-found: "Sender user does not exist"
+      receptor-not-found: "Receptor does not exist"
