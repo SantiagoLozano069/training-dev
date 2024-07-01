@@ -69,10 +69,10 @@ class NotificationServiceImplTest {
         NotificationRequest request = UtilData.createNotificationRequest();
         when(userRepository.findById(anyInt())).thenReturn(Optional.empty());
 
-        NotificationException exception = assertThrows(NotificationException.class, () -> {
+        NotificationNotFoundException exception = assertThrows(NotificationNotFoundException.class, () -> {
             notificationService.createNotification(request);
         });
-        assertEquals(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()), exception.getCode());
+        assertEquals(String.valueOf(HttpStatus.NOT_FOUND.value()), exception.getCode());
     }
 
 
