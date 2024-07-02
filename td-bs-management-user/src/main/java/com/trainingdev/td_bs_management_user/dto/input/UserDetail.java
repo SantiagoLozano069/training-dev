@@ -1,10 +1,12 @@
 package com.trainingdev.td_bs_management_user.dto.input;
 
+import com.trainingdev.td_bs_management_user.enums.GenderEnum;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -17,13 +19,13 @@ public class UserDetail {
 
     private String name;
 
-    private String birthday;
+    private LocalDate birthday;
 
     private String email;
 
     private String password;
 
-    private String gender;
+    private GenderEnum gender;
 
     private String profilePhoto;
 

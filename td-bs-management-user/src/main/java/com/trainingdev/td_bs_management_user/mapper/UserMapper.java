@@ -15,7 +15,7 @@ import org.mapstruct.Mapping;
 public interface UserMapper {
 
     @Mapping(target = "name", expression = "java(userRequest.getFirstName() + \" \" + userRequest.getLastName())")
-    UserEntity userRequesttoUserEntity(UserRequest userRequest);
+    UserEntity userRequestToUserEntity(UserRequest userRequest);
 
     UserDetail userEntityToUserDetail(UserEntity userEntity);
 

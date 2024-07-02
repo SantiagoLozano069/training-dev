@@ -9,9 +9,6 @@ import com.trainingdev.td_bs_management_user.dto.output.UserProfile;
 import com.trainingdev.td_bs_management_user.entities.CommentEntity;
 import com.trainingdev.td_bs_management_user.entities.PostEntity;
 import com.trainingdev.td_bs_management_user.entities.UserEntity;
-import com.trainingdev.td_bs_management_user.enums.GenderEnum;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -19,14 +16,14 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-06-30T18:31:44-0500",
+    date = "2024-07-01T14:56:57-0500",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.11 (Oracle Corporation)"
 )
 @Component
 public class UserMapperImpl implements UserMapper {
 
     @Override
-    public UserEntity userRequesttoUserEntity(UserRequest userRequest) {
+    public UserEntity userRequestToUserEntity(UserRequest userRequest) {
         if ( userRequest == null ) {
             return null;
         }
@@ -54,14 +51,10 @@ public class UserMapperImpl implements UserMapper {
 
         userDetail.setId( userEntity.getId() );
         userDetail.setName( userEntity.getName() );
-        if ( userEntity.getBirthday() != null ) {
-            userDetail.setBirthday( DateTimeFormatter.ISO_LOCAL_DATE.format( userEntity.getBirthday() ) );
-        }
+        userDetail.setBirthday( userEntity.getBirthday() );
         userDetail.setEmail( userEntity.getEmail() );
         userDetail.setPassword( userEntity.getPassword() );
-        if ( userEntity.getGender() != null ) {
-            userDetail.setGender( userEntity.getGender().name() );
-        }
+        userDetail.setGender( userEntity.getGender() );
         userDetail.setProfilePhoto( userEntity.getProfilePhoto() );
         userDetail.setCoverPhoto( userEntity.getCoverPhoto() );
         userDetail.setCreationDate( userEntity.getCreationDate() );
@@ -80,14 +73,10 @@ public class UserMapperImpl implements UserMapper {
 
         userEntity.id( userDetail.getId() );
         userEntity.name( userDetail.getName() );
-        if ( userDetail.getBirthday() != null ) {
-            userEntity.birthday( LocalDate.parse( userDetail.getBirthday() ) );
-        }
+        userEntity.birthday( userDetail.getBirthday() );
         userEntity.email( userDetail.getEmail() );
         userEntity.password( userDetail.getPassword() );
-        if ( userDetail.getGender() != null ) {
-            userEntity.gender( Enum.valueOf( GenderEnum.class, userDetail.getGender() ) );
-        }
+        userEntity.gender( userDetail.getGender() );
         userEntity.profilePhoto( userDetail.getProfilePhoto() );
         userEntity.coverPhoto( userDetail.getCoverPhoto() );
 
@@ -162,14 +151,10 @@ public class UserMapperImpl implements UserMapper {
 
         userDetail.setId( userEntity.getId() );
         userDetail.setName( userEntity.getName() );
-        if ( userEntity.getBirthday() != null ) {
-            userDetail.setBirthday( DateTimeFormatter.ISO_LOCAL_DATE.format( userEntity.getBirthday() ) );
-        }
+        userDetail.setBirthday( userEntity.getBirthday() );
         userDetail.setEmail( userEntity.getEmail() );
         userDetail.setPassword( userEntity.getPassword() );
-        if ( userEntity.getGender() != null ) {
-            userDetail.setGender( userEntity.getGender().name() );
-        }
+        userDetail.setGender( userEntity.getGender() );
         userDetail.setProfilePhoto( userEntity.getProfilePhoto() );
         userDetail.setCoverPhoto( userEntity.getCoverPhoto() );
         userDetail.setCreationDate( userEntity.getCreationDate() );

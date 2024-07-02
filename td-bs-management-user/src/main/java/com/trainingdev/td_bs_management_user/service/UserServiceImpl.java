@@ -23,9 +23,10 @@ public class UserServiceImpl implements UserService {
     @Value("${properties.messages.error.user-does-not-exist}")
     private String userDoesntExistError;
 
+
     @Override
     public UserDetail createUser(UserRequest userRequest) {
-        UserEntity userEntity = userMapper.userRequesttoUserEntity(userRequest);
+        UserEntity userEntity = userMapper.userRequestToUserEntity(userRequest);
         UserEntity userEntitySaved = userRepository.save(userEntity);
         return userMapper.userEntityToUserDetail(userEntitySaved);
     }
