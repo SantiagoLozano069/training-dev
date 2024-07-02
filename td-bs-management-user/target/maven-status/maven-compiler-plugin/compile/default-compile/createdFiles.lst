@@ -6,7 +6,6 @@ com\trainingdev\td_bs_management_user\entities\CommentEntity$CommentEntityBuilde
 com\trainingdev\td_bs_management_user\exception\UserNotFoundException.class
 com\trainingdev\td_bs_management_user\dto\business\PostDetail.class
 com\trainingdev\td_bs_management_user\enums\FeelingsEnum.class
-com\trainingdev\td_bs_management_user\service\UserServiceImpl.class
 com\trainingdev\td_bs_management_user\dto\business\Comment.class
 com\trainingdev\td_bs_management_user\entities\PostEntity.class
 com\trainingdev\td_bs_management_user\exception\UserException.class
@@ -22,6 +21,7 @@ com\trainingdev\td_bs_management_user\mapper\UserMapper.class
 com\trainingdev\td_bs_management_user\mapper\UserMapperImpl.class
 com\trainingdev\td_bs_management_user\entities\UserEntity$UserEntityBuilder.class
 com\trainingdev\td_bs_management_user\entities\AuditModel.class
+com\trainingdev\td_bs_management_user\service\impl\UserServiceImpl.class
 com\trainingdev\td_bs_management_user\controller\UserController.class
 com\trainingdev\td_bs_management_user\enums\PostTypeEnum.class
 com\trainingdev\td_bs_management_user\dto\output\ErrorResponse.class

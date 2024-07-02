@@ -13,7 +13,6 @@ C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\dto\business\UserComment.java
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\controller\UserController.java
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\entities\AuditModelListener.java
-C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\service\UserServiceImpl.java
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\exception\UserNotFoundException.java
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\entities\AuditModel.java
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\entities\CommentEntity.java
@@ -22,3 +21,4 @@ C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\enums\GenderEnum.java
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\exception\UserException.java
 C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\enums\FeelingsEnum.java
+C:\SANTIAGO_LOZANO\TraningDev\TraningDev Project\td-bs-management-user\src\main\java\com\trainingdev\td_bs_management_user\service\impl\UserServiceImpl.java

@@ -16,11 +16,11 @@ public class UserRequest {
     private Integer id;
 
     @NotEmpty(message = "firstName cannot be empty")
-    @Size(max = 20)
+    @Size(max = 20, message = "firstName cannot be longer than 20 characters")
     private String firstName;
 
     @NotEmpty(message = "lastName cannot be empty")
-    @Size(max = 20)
+    @Size(max = 20, message = "lastName cannot be longer than 20 characters")
     private String lastName;
 
     @NotNull(message = "birthday cannot be null")
